@@ -1,0 +1,37 @@
+Hey guys!
+
+This was a fun game!  I put some time into this last night and worked my way through the "beginner" levels.  I had some errands to run this morning, but I came home this afternoon and put some time into the "intermediate" levels (see below).
+
+RECAP: BEGINNER
+========================
+LEVELS 1-3: Went pretty well using existing knowledge base.  Nested if/elsif/else conditionals got the job done.
+
+LEVEL 4: I stopped to look up an instance variable and think about how best to run a check against health before moving forward.
+
+LEVEL 6: This was a hard stop for me.  If I skipped the hostage, my code worked pretty well.  But I wasn't happy with that.  
+
+My if conditionals were getting a little straggly and I ended up spending a lot of time working on a bug where my warrior went backwards, rescued the hostage, then ended up jitterbugging backwards and forwards in place in an infinite loop.
+
+I worked on that for a bit, changing variables around, but I wasn't happy with a solution that hard-coded stuff in based on my ability to "cheat" and see the map for my warrior.  After playing with it for a bit, I turned to Google and started reading other people's code.  I found a lot of partial solutions.  I tried some.  
+
+Some worked but had really long completion times.  There was one where the warrior basically retreated all the way to the wall and healed to full after taking any damage.  Even after killing the final archer.  So that sucked.  I read his code to make sure I understood everything, then integrated some of it into my own and adjusted the threshold to "retreat to the wall and heal up".  But I wasn't really happy with that either.  Everything worked, but there was no time bonus.  I kept looking.
+
+Eventually I found some much better looking code than my own and started to refactor my spaghetti code into something readable.  At this point a lot of the conditional logic was being repeated.  I took that out and put them in functions.  Changing directions worked much better that way.
+
+
+LEVEL 7: Level 7 was easy after the changes made in level 6.
+LEVELS 8-9: I bogged down here with the arrays from warrior.glance.  I just wasn't familiar enough with arrays in Ruby to implement conditional logic.  My guy shot the hostage on his second attempt.  :-0
+
+So I did the Google thing to figure out how to read arrays, identify targets, etc.  I can't say my solutions to 8 and 9 are all my own, but I read through the code, broke it apart, and made sure I understood anything new before I implemented them.  The equivalent of learning to ride a bike on "training wheels".  I'm trying to build some muscle memory.
+
+
+INTERMEDIATE
+=========================
+LEVELS 1-2: So we're now on 2D maps.  I was able to navigate these pretty well using direction_to_stairs to orient my warrior at the end of each turn.  I killed some guys but left one alive as my warrior bolted for the stairs.
+
+LEVEL 3: Was a hard stop for me before the buzzer rang at 4:30pm.  Couple challenges to this level.  We're introducing a new action (warrior.bind!), and we start the round surrounded by enemies.  
+
+Some thoughts:
+* Since warrior.feel doesn't consume a turn, it should be possible to have the warrior look in all four directions each round, store the result in a variable, then use a case statement to select actions.  Using count here could help determine whether to use warrior.bind! or warrior.attack!
+* I'm going to need a more elegant way to reverse direction, now that we're in 2D space and we no longer have warrior.pivot!  I was thinking about assigning directions as values in a hash, then integers as key values, and using -num to reverse the value of the integers and pull the opposite directions out of the hash where we had previously just used :backwards.
+* If I can figure out how best to look in each direction, assess the map, I can probably go back and clear LEVEL 2 out for a better score.  I'll have to play with it.

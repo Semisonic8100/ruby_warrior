@@ -1,0 +1,34 @@
+Hyber walks forward
+CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby.
+Level Score: 74
+Time Bonus: 3
+Clear Bonus: 15
+Total Score: 443 + 92 = 535
+Would you like to continue on to epic mode? [yn] 
+
+
+Epic mode:
+===================
+Hyber walks forward
+CONGRATULATIONS! You have climbed to the top of the tower and rescued the fair maiden Ruby.
+Level Score: 74
+Time Bonus: 3
+Clear Bonus: 15
+Level Grade: A
+Total Score: 483 + 92 = 575
+Your average grade for this tower is: A
+
+  Level 1: S
+  Level 2: A
+  Level 3: S
+  Level 4: A
+  Level 5: A
+  Level 6: D
+  Level 7: S
+  Level 8: S
+  Level 9: A
+
+To practice a level, use the -l option:
+
+  rubywarrior -l 3
+
